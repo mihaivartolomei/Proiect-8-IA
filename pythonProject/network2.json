@@ -1,0 +1,25 @@
+{
+    "Ploaie": {
+        "parents": [],
+        "probabilities": {
+            "True": 0.3,
+            "False": 0.7
+        }
+    },
+    "Trafic": {
+        "parents": ["Ploaie"],
+        "probabilities": {
+            "(True,)": {"True": 0.8, "False": 0.2},
+            "(False,)": {"True": 0.4, "False": 0.6}
+        }
+    },
+    "Accident": {
+        "parents": ["Ploaie", "Trafic"],
+        "probabilities": {
+            "(True, True)": {"True": 0.9, "False": 0.1},
+            "(True, False)": {"True": 0.5, "False": 0.5},
+            "(False, True)": {"True": 0.6, "False": 0.4},
+            "(False, False)": {"True": 0.2, "False": 0.8}
+        }
+    }
+}

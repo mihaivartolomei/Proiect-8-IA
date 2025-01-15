@@ -1,0 +1,39 @@
+{
+    "Gripa": {
+        "parents": [],
+        "probabilities": {
+            "True": 0.1,
+            "False": 0.9
+        }
+    },
+    "Abces": {
+        "parents": [],
+        "probabilities": {
+            "True": 0.05,
+            "False": 0.95
+        }
+    },
+    "Febra": {
+        "parents": ["Gripa", "Abces"],
+        "probabilities": {
+            "(True, True)": {"True": 0.8, "False": 0.2},
+            "(True, False)": {"True": 0.7, "False": 0.3},
+            "(False, True)": {"True": 0.25, "False": 0.75},
+            "(False, False)": {"True": 0.05, "False": 0.95}
+        }
+    },
+    "Oboseala": {
+        "parents": ["Febra"],
+        "probabilities": {
+            "(True,)": {"True": 0.6, "False": 0.4},
+            "(False,)": {"True": 0.2, "False": 0.8}
+        }
+    },
+    "Anorexie": {
+        "parents": ["Febra"],
+        "probabilities": {
+            "(True,)": {"True": 0.5, "False": 0.5},
+            "(False,)": {"True": 0.1, "False": 0.9}
+        }
+    }
+}
